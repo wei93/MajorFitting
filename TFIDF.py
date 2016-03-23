@@ -160,9 +160,9 @@ def top_ngrams_for_candidate(tfidf_dicts, filename, count=20):
 
 def main():
     file_paths = []
-    filelist = os.listdir("data")
+    filelist = os.listdir("ratemyprofessors")
     for filename in filelist:
-        dic_name = "data" + '/'
+        dic_name = "ratemyprofessors" + '/'
         path_txt = dic_name+ filename
         file_paths.append(path_txt)
 
@@ -172,10 +172,19 @@ def main():
     tfidf_dicts = prune_substrings(tfidf_dicts, file_paths)
 
     # print the top ngrams sorted by tfidf
+    os.getcwd()
+    os.mkdir("rankresult")
+    os.chdir("rankresult")
+    i = 0
     for filename in range(len(file_paths)):
+        fo = open(file_paths[filename][17:], 'a')
+        #fo = open('t' + str(i) + '.txt', 'a')
         print file_paths[filename]
-        for ngram in top_ngrams_for_candidate(tfidf_dicts, filename, 10):
-            print ngram
+        for ngram in top_ngrams_for_candidate(tfidf_dicts, filename, 50):
+            n = str(ngram)
+            fo.write(repr(n)+ '\n')
+        i = i + 1
+        fo.close
 
     
     
