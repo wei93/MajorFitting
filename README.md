@@ -16,6 +16,7 @@ The code for crawler is in crawler folder.
 ###Core Algorithms
 
 We implemented two main functionalities for the project. The first is output the statistically improbable phrases of each department's comments. 
+
 1. statistically improbable phrases of each department's comments
 
    run "python rankTFIDF.py"
