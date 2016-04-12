@@ -17,7 +17,7 @@ The code for crawler is in crawler folder.
 
 We implemented two main functionalities for the project. The first functionality is to output the statistically improbable phrases of each department's comments. We listed the top 50 pharses with the highest TFIDF score of each department. The folder named rankresult(5 words) contains the result of pharses whose longest length is five words. The folder named rankresult(10 words) is the result of ranked pharses with the longest length of 10 words. 
 
-The second functionality is rank departments that is most cosine similar to the input query. For example the input query is "exam is hard" in query.txt. The program will output the top 5 departments with highest cosine score.
+The second functionality is to rank departments that is most cosine similar to the input query. For example the input query is "exam is hard" in query.txt. The program will output the top 5 departments with highest cosine score.
 
 1. statistically improbable phrases of each department's comments
 
