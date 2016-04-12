@@ -14,6 +14,9 @@ scrapy crawl cragis -o items.json. (the cragis will indicates which spider docum
 ###Core Algorithms
 
 1. statistically improbable phrases of each department's comments
+
    run "python rankTFIDF.py"
+   
 2. vector space model plus cosine to rank departments by input query
+
    run "python query.py ratemyprofessorsdata query.txt"
