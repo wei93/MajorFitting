@@ -11,7 +11,7 @@ second step:
 after we set up the environment for the Scrapy. we can run the application in the first directory of file by:
 scrapy crawl cragis -o items.json. (the cragis will indicates which spider document we will use and finally result the json type for the data )
 
-The code for crawler is in crawler folder.
+The code for crawler is in crawler folder. The output (comments of all departments in Texas A&M) is in RateMyProfessorsdata folder.
 
 ###Core Algorithms
 
