@@ -11,8 +11,11 @@ second step:
 after we set up the environment for the Scrapy. we can run the application in the first directory of file by:
 scrapy crawl cragis -o items.json. (the cragis will indicates which spider document we will use and finally result the json type for the data )
 
+The code for crawler is in crawler folder.
+
 ###Core Algorithms
 
+We implemented two main functionalities for the project. The first is output the statistically improbable phrases of each department's comments. 
 1. statistically improbable phrases of each department's comments
 
    run "python rankTFIDF.py"
