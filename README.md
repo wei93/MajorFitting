@@ -26,3 +26,8 @@ The second functionality is to rank departments that is most cosine similar to t
 2. vector space model plus cosine to rank departments by input query
 
    run "python query.py ratemyprofessorsdata query.txt"
+   
+###UI
+   
+   run "python server.py"
+   on brower, open the url "localhost:5000"
