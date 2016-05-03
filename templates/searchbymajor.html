@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>major fitting</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include Twitter Bootstrap and jQuery: -->
+
+
+<!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
+
+
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
+<!-- Include the plugin's CSS and JS: -->
+
+
+
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.2.3.js')}}">
+</script>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js')}}">
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js')}}">
+</script>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.multi-select.js') }}">
+</script>
+ 
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='multi-select.css') }}">
+
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dropdown.css') }}">
+
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+
+
+
+
+</head>
+<body>
+<!-- ========================================navigate=============================-->
+	 <nav class="navbar navbar-default" >
+        <div class="container-fluid">
+
+            <!-- Logo -->
+            <div class="navbar-header">
+                <a href="#" class="pull-left"><img alt="Brand" src="static/brand.jpg" width="80px">
+      			</a>
+            </div>
+
+            <!-- Menu Items -->
+            <div>
+                <ul class="nav navbar-nav">
+                    <li><a href="/">main</a></li>
+                    <li class="active"><a href="/searchbymajor">Search by major</a></li>
+                    <li><a href="/searchbytags">Search by tags</a></li>
+                    <li><a href="/about">Teammates</a></li>
+                </ul>
+            </div>
+
+
+
+        </div>
+    </nav>
+
+
+<!--- +++++++++==========block of select=======================-->
+
+
+
+
+
+
+<!-- /container -->
+<center>
+ <form name="InventoryList" action="/searchbymajor" method="POST"> 
+  <select name="SelBranch" id="mychoice" multiple="multiple">
+  
+	<option value="Accounting">Accounting</option>
+	<option value="Agribusiness">Agribusiness</option>
+	<option value="Agricultural Sciences">Agricultural Sciences</option>
+	<option value="Agriculture">Agriculture</option>
+	<option value="Agronomy">Agronomy</option>
+	<option value="Air Force Studies">Air Force Studies</option>
+	<option value="Animal Science">Animal Science</option>
+	<option value="Anthropology">Anthropology</option>
+	<option value="Architectural Engineering">Architectural Engineering</option>
+	<option value="Architecture">Architecture</option>
+	<option value="Art  Design">Art  Design</option>
+	<option value="Art">Art</option>
+	<option value="Art History">Art History</option>
+	<option value="Astronomy">Astronomy</option>
+	<option value="Athletic Training">Athletic Training</option>
+	<option value="Athletics">Athletics</option>
+	<option value="Atmospheric Sciences">Atmospheric Sciences</option>
+	<option value="Aviation">Aviation department</option>
+	<option value="Biochemistry">Biochemistry department</option>
+	<option value="Biological Sciences">Biological Sciences</option>
+	<option value="Biology">Biology</option>
+	<option value="Biomedical">Biomedical</option>
+	<option value="Botany">Botany</option>
+	<option value="Business">Business</option>
+	<option value="Chemical Engineering">Chemical Engineering</option>
+	<option value="Chemistry">Chemistry</option>
+	<option value="Civil Engineering">Civil Engineering</option>
+	<option value="Classics">Classics</option>
+	<option value="Communication">Communication</option>
+	<option value="Computer Engineering">Computer Engineering</option>
+	<option value="Computer Science">Computer Science</option>
+	<option value="Construction">Construction</option>
+	<option value="Construction Technology">Construction Technology</option>
+	<option value="Counseling  Educational Psych">Counseling  Educational Psych</option>
+	<option value="Counseling">Counseling</option>
+	<option value="Criminal Justice">Criminal Justice</option>
+	<option value="Criminology">Criminology</option>
+	<option value="Design">Design</option>
+	<option value="Earth Science">Earth Science</option>
+	<option value="Economics">Economics</option>
+	<option value="Education Administration">Education Administration</option>
+	<option value="Education">Education</option>
+	<option value="Electrical Engineering">Electrical Engineering</option>
+	<option value="Engineering">Engineering</option>
+	<option value="Engineering Technology">Engineering Technology</option>
+	<option value="English">English</option>
+	<option value="Entomology">Entomology</option>
+	<option value="Environmental Science">Environmental Science</option>
+	<option value="Ethnic Studies">Ethics Studies</option>
+	<option value="Film">Film</option>
+	<option value="Finance">Finance</option>
+	<option value="Fine Arts">Fine Arts</option>
+	<option value="Food Science">Food Science</option>
+	<option value="Foreign Languages">Foreign Languages</option>
+	<option value="French">French</option>
+	<option value="General Studies">General Studies</option>
+	<option value="Genetics">Genetics</option>
+	<option value="Geography">Geography</option>
+	<option value="Geology">Geology</option>
+	<option value="Graphic Arts">Graphic Arts</option
+	<option value="Health  Kinesiology">Health  Kinesiology </option>
+	<option value="Health  Physical Education">Health  Physical Education </option>
+	<option value="Health Science">Health Science </option>
+	<option value="Hispanic Studies">Hispanic Studies </option>
+	<option value="History"> History  </option>
+	<option value="Horticulture"> Horticulture  </option>
+	<option value="Hospitality"> Hospitality  </option>
+	<option value="Human Sciences"> Human Sciences  </option>
+	<option value="Humanities"> Humanities  </option>
+	<option value="Information Science">Information Science </option>
+	<option value="Instructional Technology">Instructional Technology</option>
+	<option value="International Studies">International Studies </option>
+	<option value="Journalism">Journalism</option>
+	<option value="Languages">Languages</option>
+	<option value="Law">Law</option>
+	<option value="Learning Skills">Learning Skills</option>
+	<option value="Liberal Studies">Liberal Studies</option>
+	<option value="Life Science">Life Science</option>
+	<option value="Linguistics">Linguistics</option>
+	<option value="Literature"> Literature</option>
+	<option value="Management">Management</option>
+	<option value="Marine Sciences">Marine Sciences</option>
+	<option value="Maritime Law">Maritime Law</option>
+	<option value="Marketing">Marketing</option>
+	<option value="Mass Communications">Mass Communications</option>
+	<option value="Mathematics">Mathematics</option>
+	<option value="Mechanical Engineering">Mechanical Engineering</option>
+	<option value="Meteorology">Meteorology</option>
+	<option value="Microbiology">Microbiology</option>
+	<option value="Modern Languages">Modern Languages</option>
+	<option value="Music">Music</option>
+	<option value="Not Specified">Not Specified</option>
+	<option value="Nuclear Engineering">Nuclear Engineering</option>
+	<option value="Nursing">Nursing</option>
+	<option value="Nutrition  Foods">Nutrition  Foods</option>
+	<option value="Philosophy">Philosophy</option>
+	<option value="Photography">Photography</option>
+	<option value="Physical Ed">Physical Ed</option>
+	<option value="Physical Education">Physical Education</option>
+	<option value="Physical Sciences">Physical Sciences</option>
+	<option value="Physics  Astronomy">Physics  Astronomy</option>
+	<option value="Physics  Chemistry">Physics  Chemistry</option>
+	<option value="Physics">Physics</option>
+	<option value="Political Science">Political Science</option>
+	<option value="Psychology  Counseling">Psychology  Counseling</option>
+	<option value="Psychology  Sociology">Psychology  Sociology</option>
+	<option value="Psychology">Psychology</option>
+	<option value="Recreation Parks  Tourism">Recreation Parks  Tourism</option>
+	<option value="Religion">Religion</option>
+	<option value="Rhetoric">Rhetoric</option>
+	<option value="Science">Science</option>
+	<option value="Social Science">Social Science</option>
+	<option value="Social Work">Social Work</option>
+	<option value="Sociology">Sociology</option>
+	<option value="Soils">Soils</option>
+	<option value="Spanish">Spanish</option>
+	<option value="Speech"> Speech</option>
+	<option value="Theater">Theater</option>
+	<option value="Theology">Theology</option>
+	<option value="Veterinary Sciences">Veterinary Sciences </option>
+	<option value="Womens Studies">Womens Studies</option>
+	<option value="Writing">Writing</option>
+	<option value="Zoology">Zoology</option>
+	
+	
+
+  </select>
+ 
+  <script type="text/javascript">
+   
+        $('#mychoice').multiSelect();
+    
+  </script>
+  
+  <br>
+      <input  class="styled-button-6" type="button" value="submit" onclick="myFunction()">
+  <br>
+  <!-- 
+  <h2>{% autoescape false %}
+            Choose Your Interested Majors{{po}}
+            {% endautoescape %}
+  </h2>
+  -->
+  
+ </form>
+ 
+
+</center>
+
+
+
+   
+      <!-- Example row of columns -->
+
+      <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+	        <center><p id="d1" class="display"></p>
+	        <p><iframe id = "s1" src="" name="myFrame" width="500" align="middle" marginwidth="0"  height="100" marginheight="0" class="hidden iframe" scrolling="auto"></iframe></p>
+	      <!--   <p><iframe id = "s1" src="" name="myFrame" width="500" align="middle" marginwidth="0"  height="100" marginheight="0" class="hidden iframe" scrolling="auto"></iframe></p> -->
+	        </center>
+
+        </div>
+        <div class="col-md-6">
+	       <center> <p id="d2" class="display"></p>
+	       	<p><iframe id = "s2" src="" name="myFrame" width="500" align="middle" marginwidth="0"  height="100" marginheight="0" class="hidden iframe" scrolling="auto"></iframe></p>
+	       </center>
+	        
+
+       </div>
+        
+     </div>
+    
+	</div>
+
+	
+	
+<hr>
+	<!-- ===== -->
+
+     <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+	        <center>
+			<p><iframe id = "1" src="" name="myFrame" width="375" marginwidth="0"  height="300" marginheight="0" class="hidden iframe box_textshadow box_rotate" scrolling="auto" ></iframe></p>
+		</center>
+
+
+        </div>
+        <div class="col-md-6">
+	        <center>
+
+			<p><iframe id = "2" src="" name="myFrame" width="375"  marginwidth="0"  height="300" marginheight="0" class="hidden iframe box_textshadow box_rotate1" scrolling="auto"></iframe></p>
+		</center>
+
+
+       </div>
+       
+     </div>
+    
+	</div>
+
+	<div class="container">
+      <div class="row">
+        
+	        <center><p id="d3" class="display"></p>
+	        	<p><iframe id = "s3" src="" name="myFrame" width="500" align="middle" marginwidth="0"  height="100" marginheight="0" class="hidden iframe" scrolling="auto"></iframe></p>
+	        </center>
+	        
+
+        
+     </div>
+    
+	</div>
+	<hr>
+
+	<div class="container">
+      <div class="row">
+       
+	        <center>
+
+			<p><iframe id = "3" src="" name="myFrame" width="300" marginwidth="0"  height="300" marginheight="0" class="hidden iframe box_textshadow box_rotate" scrolling="auto" ></iframe></p>
+		</center>
+
+
+        
+
+       </div>
+        
+     </div>
+    
+	
+      <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+	        <center><p id="d4" class="display"></p>
+	        	<p><iframe id = "s4" src="" name="myFrame" width="500" align="middle" marginwidth="0"  height="100" marginheight="0" class="hidden iframe" scrolling="auto"></iframe></p>
+	       	</center>
+	        
+
+        </div>
+        <div class="col-md-6">
+	       <center> <p id="d5" class="display"></p>
+	       	<p><iframe id = "s5" src="" name="myFrame" width="500" align="middle" marginwidth="0"  height="100" marginheight="0" class="hidden iframe" scrolling="auto"></iframe></p>
+	       </center>
+	        
+
+       </div>
+        
+     </div>
+    
+	</div>
+
+	
+	
+<hr>
+	<!-- ===== -->
+
+     <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+	        <center>
+			<p><iframe id = "4" src="" name="myFrame" width="375" marginwidth="0"  height="300" marginheight="0" class="hidden iframe box_textshadow box_rotate" scrolling="auto" ></iframe></p>
+		</center>
+
+
+        </div>
+        <div class="col-md-6">
+	        <center>
+
+			<p><iframe id = "5" src="" name="myFrame" width="375"  marginwidth="0"  height="300" marginheight="0" class="hidden iframe box_textshadow box_rotate1" scrolling="auto"></iframe></p>
+		</center>
+
+
+       </div>
+       
+     </div>
+    
+	</div>
+
+
+
+
+
+
+
+
+<p id="d1" class="display"></p>
+<p><iframe id = "s1" src="" name="myFrame" width="500" align="middle" marginwidth="0"  height="100" marginheight="0" class="hidden iframe" scrolling="auto"></iframe></p>
+<p><iframe id = "1" src="" name="myFrame" width="500" align="middle" marginwidth="0"  height="500" marginheight="0" class="hidden iframe box_textshadow box_rotate" scrolling="auto" ></iframe></p>
+
+<p id="d2" class="display"></p>
+<p><iframe id = "s2" src="" name="myFrame" width="500" align="middle" marginwidth="0"  height="100" marginheight="0" class="hidden iframe" scrolling="auto"></iframe></p>
+<p><iframe id = "2" src="" name="myFrame" width="500" align="middle" marginwidth="0"  height="500" marginheight="0" class="hidden iframe box_textshadow box_rotate1" scrolling="auto"></iframe></p>
+
+<p id="d3" class="display"></p>
+<p><iframe id = "s3" src="" name="myFrame" width="500" align="middle" marginwidth="0"  height="100" marginheight="0" class="hidden iframe" scrolling="auto"></iframe></p>
+<p><iframe id = "3" src="" name="myFrame" width="500" align="middle" marginwidth="0"  height="500" marginheight="0" class="hidden iframe box_textshadow" scrolling="auto"></iframe></p>
+
+<p id="d4" class="display"></p>
+<p><iframe id = "s4" src="" name="myFrame" width="500" align="middle" marginwidth="0"  height="100" marginheight="0" class="hidden iframe" scrolling="auto"></iframe></p>
+<p><iframe id = "4" src="" name="myFrame" width="500" align="middle" marginwidth="0"  height="500" marginheight="0" class="hidden iframe box_textshadow" scrolling="auto"></iframe></p>
+
+<p id="d5" class="display"></p>
+<p><iframe id = "s5" src="" name="myFrame" width="500" align="middle" marginwidth="0"  height="100" marginheight="0" class="hidden iframe" scrolling="auto"></iframe></p>
+<p><iframe id = "5" src="" name="myFrame" width="500" align="middle" marginwidth="0"  height="500" marginheight="0" class="hidden iframe box_textshadow" scrolling="auto"></iframe></p>
+
+
+
+
+<script>
+	$(document).ready(function() {
+
+	  var last_valid_selection = null;
+
+	  $('#mychoice').change(function(event) {
+		if ($(this).val().length > 5) {
+		  alert('You can only choose 5!');
+		  $(this).val(last_valid_selection);
+		} else {
+		  last_valid_selection = $(this).val();
+		}
+	  });
+	});
+	  
+	
+	
+    function myFunction() {
+
+      var InvForm = document.forms.InventoryList;
+         var SelBranchVal = "";
+         var x = 0;
+		 var num = 1;
+		//reset
+		for (var i = 1; i < 6; i++){
+			document.getElementById("d" + String(i)).innerHTML = "";
+			document.getElementById(String(i)).src =  "";
+			document.getElementById(String(i)).style.visibility = "hidden";
+			document.getElementById("s" + String(i)).style.visibility = "hidden";
+		}
+		 
+		 
+         for (x = 0; x < InvForm.SelBranch.length; x++)
+         {
+
+            if (InvForm.SelBranch[x].selected)
+            {
+					
+				SelBranchVal = SelBranchVal + "," + InvForm.SelBranch[x].value;
+				
+				$("#"+ String(num)).removeClass("hidden");
+				document.getElementById(String(num)).style.visibility = "visible";
+				$("#s"+ String(num)).removeClass("hidden");
+				document.getElementById("s" + String(num)).style.visibility = "visible";
+				
+				document.getElementById("d" + String(num)).innerHTML = InvForm.SelBranch[x].value;
+				
+				var filename = "static/result/Professor in the "+ InvForm.SelBranch[x].value + " department.txt";
+				document.getElementById(String(num)).src =  filename; 
+				
+				var scorefilename = "static/score/Professor in the "+ InvForm.SelBranch[x].value + " department.txt";
+				document.getElementById("s" + String(num)).src =  scorefilename; 
+				
+				num++;
+
+
+            }
+         }
+		//alert(SelBranchVal);
+        
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+the average clarity : 5.0
+the average clarity : 3.8
+the average easniess : 4.0
+the average easniess : 2.4
+the average helpfuness : 4.0
+the average helpfuness : 3.3
+the average overallquailty : 4.5
+the average overallquailty : 3.5

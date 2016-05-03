@@ -42,6 +42,7 @@ import os
 import re
 import math
 
+#value is the string value of the field
 # +++your code here+++
 # Define print_words(filename) and print_top(filename) functions.
 # You could write a helper utility function that reads a file
@@ -155,7 +156,7 @@ def rank(foldername, filename):
         print "%(num)s. %(item0)s (score is %(item1)s)" % {"num": n, "item0": item[0], "item1": item[1]}
         n += 1
 
-
+@app.route('/print_top/')
 def print_top(foldername):
     dict = tf(foldername)
     items = sorted(dict.items(), key = lambda dict: dict[1], reverse = True)
@@ -163,7 +164,8 @@ def print_top(foldername):
     for item in items[:5]:
         print "%(num)s. %(item0)s (frequency is %(item1)s)" % {"num": n, "item0": item[0], "item1": item[1]}
         n += 1
-
+    return 'print top'
+    return render_template('searchbytags.html')
 
 # This basic command line argument parsing code is provided and
 # calls the print_words() and print_top() functions which you must define.
@@ -190,4 +192,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    app.run()
